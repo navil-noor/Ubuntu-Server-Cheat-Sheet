@@ -93,8 +93,11 @@
         <pre><code># Check Ubuntu version
 lsb_release -a
 
-# Update & Upgrade system
-sudo apt update && sudo apt upgrade -y
+# Refresh system package list
+sudo apt update
+
+# Upgrades system installed packages
+sudo apt upgrade
 
 # Reboot system
 sudo reboot
@@ -296,6 +299,9 @@ doveadm mailbox list</code></pre>
     <div class="section">
         <h2><i class="fas fa-cogs"></i> ISPConfig</h2>
         <pre><code># Check ISPConfig version
+sudo ispconfig_update.sh --checkversion
+
+# Update ISPConfig version
 sudo ispconfig_update.sh --version
 
 # Access ISPConfig panel
