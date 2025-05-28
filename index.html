@@ -257,7 +257,9 @@ dig yourdomain.com</code></pre>
     <div class="section">
         <h2><i class="fas fa-mail-bulk"></i> Postfix (Mail Server)</h2>
         <pre><code># Check Postfix version
-postconf -d
+postconf mail_version
+
+apt show postfix | grep Version (Another method)
 
 # Check status
 sudo systemctl status postfix
