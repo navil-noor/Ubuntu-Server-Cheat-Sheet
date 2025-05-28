@@ -280,7 +280,7 @@ sudo tail -f /var/log/mail.log</code></pre>
     <div class="section">
         <h2><i class="fas fa-envelope-open-text"></i> Dovecot (IMAP/POP3)</h2>
         <pre><code># Check Dovecot version
-doveadm --version
+dovecot --version
 
 # Check status
 sudo systemctl status dovecot
@@ -294,8 +294,16 @@ sudo tail -f /var/log/mail.log
 # Restart Dovecot service
 sudo systemctl restart dovecot
 
-# List Dovecot mailboxes
-doveadm mailbox list</code></pre>
+# Dovecot other options
+dovecot [options]
+  -F                 Run in foreground
+  -c <config file>   Use alternate configuration file
+  -p                 Show PID
+  -n                 Show config settings
+  --help             Display this help message
+  --version          Display version
+  --build-options    Show build options
+  --hostdomain       Set custom host and domain</code></pre>
     </div>
 
     <div class="section">
